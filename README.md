@@ -27,7 +27,8 @@ Para que o o programa funcione os itens abaixo devem ser configurados, as explic
 - beautifulsoup4 pip [https://pypi.org/project/beautifulsoup4/](url);
 - Navegador Google Chrome em sua versão atualizada normal [google.com/chrome](url);
 - Chrome for testing [https://googlechromelabs.github.io/chrome-for-testing/](url);
-- Chrome driver [https://googlechromelabs.github.io/chrome-for-testing/](url).
+- Chrome driver [https://googlechromelabs.github.io/chrome-for-testing/](url);
+- Endereço de webhook onde os deal serão enviados.
 
 <h2>Como instalar arquivos do repositório?</h2>
 1. Baixe o arquivo dealWatcher.py no repositório https://github.com/percus-lab/deal-watcher
@@ -66,5 +67,12 @@ Copie a URL em destaque na imagem para uma nova aba no navegador ;
 2. Logue no navegador com a conta Google que será utilizada para o Deal Broker;
 3. Feche o navegador;
 4. Copie o caminho a seguir /home/seu-nome-de-usuario/.config/google-chrome/
+5. Abra com um editor de texto o arquivo dealWatcher.py, e cole o caminho na constante de configuração CHROME_USER_DATA_DIR, por exemplo:
+  CHROME_USER_DATA_DIR="/home/seu-nome-de-usuario/.config/google-chrome" 
+
+<h2>Onde eu coloco a URL do meu webhook?</h2>
+Cole a URL do seu webhook na constante de configuração WEBHOOK_URL, por exemplo:
+WEBHOOK_URL= "https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4"
+
 
 
