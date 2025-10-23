@@ -31,11 +31,12 @@ Para que o programa funcione, os itens abaixo devem ser configurados conforme ex
 * Pacotes `selenium`, `webdriver-manager` e `beautifulsoup4`.
 * Navegador Google Chrome (versão normal).
 * Chrome for testing.
+* Chrome Driver.
 * Endereço de webhook onde os deals serão enviados.
 
 ---
 
-## Como instalar arquivos do repositório?
+## 1. Como instalar arquivos do repositório?
 
 1.  Baixe o arquivo `dealWatcher.py` do repositório: `https://github.com/percus-lab/deal-watcher`.
 2.  Coloque o arquivo em uma pasta separada. Por exemplo:
@@ -43,7 +44,7 @@ Para que o programa funcione, os itens abaixo devem ser configurados conforme ex
     /home/seu-nome-de-usuario/Documentos/reps/deal-watcher/dealWatcher.py
     ```
 
-## Como instalar Python e os pacotes Pip?
+## 2. Como instalar Python e os pacotes Pip?
 
 1.  **Instale o Python** no seu sistema Linux. Para sistemas baseados em Debian:
     ```sh
@@ -58,7 +59,7 @@ Para que o programa funcione, os itens abaixo devem ser configurados conforme ex
     pip install selenium webdriver-manager bs4
     ```
 
-## Como instalar o Chrome for Testing?
+## 3. Como instalar o Chrome for Testing?
 
 1.  Acesse a página de downloads do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/).
 2.  Copie a URL do **Binary** referente ao `chrome` na plataforma `linux64` e use-a para baixar o arquivo `chrome-linux64.zip`.
@@ -71,7 +72,20 @@ Para que o programa funcione, os itens abaixo devem ser configurados conforme ex
     /home/seu-nome-de-usuario/Documentos/chrome-linux64/chrome
     ```
 
-## Como extrair as informações de login da conta do Google?
+## 4. Como instalar o Chrome Driver?
+
+1.  Na mesma página do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/), copie a URL do **Binary** referente ao `chromedriver` na plataforma `linux64` para baixar o arquivo.
+2.  Após baixar, extraia o arquivo `chromedriver-linux64.zip`.
+3.  Mova o arquivo `chromedriver` para um diretório no PATH do seu sistema, para que ele possa ser encontrado pelo script. Um local comum é `/usr/local/bin`:
+    ```sh
+    sudo mv /caminho/para/chromedriver-linux64/chromedriver /usr/local/bin/
+    ```
+4.  Dê permissão de execução ao arquivo:
+    ```sh
+    sudo chmod +x /usr/local/bin/chromedriver
+    ```
+
+## 5. Como extrair as informações de login da conta do Google?
 
 Para que o script acesse o Deal Broker já logado, ele precisa dos dados do seu perfil do Chrome.
 
@@ -83,11 +97,11 @@ Para que o script acesse o Deal Broker já logado, ele precisa dos dados do seu 
     CHROME_USER_DATA_DIR="/home/seu-nome-de-usuario/.config/google-chrome"
     ```
 
-## Onde eu configuro os caminhos e o webhook?
+## 6. Onde eu configuro os caminhos e o webhook?
 
 Ainda no arquivo `dealWatcher.py`, configure as seguintes constantes:
 
-1.  **Caminho do Chrome for Testing:** Cole o caminho que você copiou no passo 4 da instalação do Chrome for Testing na constante `CHROME_BINARY_LOCATION`. Por exemplo:
+1.  **Caminho do Chrome for Testing:** Cole o caminho que você copiou no passo 3.4 na constante `CHROME_BINARY_LOCATION`. Por exemplo:
     ```python
     CHROME_BINARY_LOCATION="/home/seu-nome-de-usuario/Documentos/chrome-linux64/chrome"
     ```
@@ -96,7 +110,7 @@ Ainda no arquivo `dealWatcher.py`, configure as seguintes constantes:
     WEBHOOK_URL="[https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4](https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4)"
     ```
 
-## Como executar o programa?
+## 7. Como executar o programa?
 
 Após concluir toda a configuração:
 
