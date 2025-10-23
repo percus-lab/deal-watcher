@@ -38,8 +38,8 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 
 ## 1. Como instalar os arquivos do repositório?
 
-1.  Baixe o arquivo `dealWatcher.py` do repositório: [https://github.com/percus-lab/deal-watcher/blob/main/dealWatcher.py](url).
-2.  Coloque o arquivo em uma pasta separada. Por exemplo:
+1.  Baixe o arquivo `dealWatcher.py` do repositório: [https://github.com/percus-lab/deal-watcher](url).
+3.  Coloque o arquivo em uma pasta separada. Por exemplo:
     ```bash
     /home/seu-nome-de-usuario/Documentos/reps/deal-watcher/dealWatcher.py
     ```
