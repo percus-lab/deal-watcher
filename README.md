@@ -25,7 +25,7 @@ O Deal Watcher é um script de monitoramento automatizado que observa a página 
 
 Para que o programa funcione, os itens abaixo devem ser instalados e configurados conforme o guia a seguir:
 
-* Um repositório baixado.
+* O código do Deal Watcher baixado.
 * Python instalado.
 * Pip instalado.
 * Pacotes `selenium`, `webdriver-manager` e `beautifulsoup4`.
