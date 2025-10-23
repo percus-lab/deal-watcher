@@ -1,78 +1,104 @@
-This file is part of Deal Watcher.
+# Deal Watcher por V4 Percus
 
-Deal Watcher is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License.
+O Deal Watcher é um script de monitoramento automatizado projetado para observar a página de ofertas do Deal Broker. Quando uma nova oferta é detectada, o script envia uma notificação instantânea com os detalhes da oferta para um webhook pré-configurado.
 
-Deal Watcher is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+## Sobre o Software (Licença)
 
-You should have received a copy of the GNU General Public License
-along with Deal Watcher.  If not, see <https://www.gnu.org/licenses/>
+[cite_start]Este projeto é um software livre: você pode redistribuí-lo e/ou modificá-lo sob os termos da Licença Pública Geral GNU, conforme publicada pela Free Software Foundation, na versão 3 da licença[cite: 1].
 
-<h1>Deal Watcher by V4 Percus</h1>
+[cite_start]O Deal Watcher é distribuído na esperança de que seja útil, mas SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM FIM ESPECÍFICO[cite: 2, 3]. [cite_start]Para mais detalhes, consulte a [Licença Pública Geral GNU](https://www.gnu.org/licenses/)[cite: 4, 5].
 
-<h2>O que eu preciso saber antes de utilizar o Deal Watcher?</h2>
-  Este programa foi feito para rodar em qualquer distribuição Linux, recomenda-se virtualizar, e enquanto o programa estiver funcionando não pode haver outra instância do Google Chrome rodando no sistema operacional.
+## ⚠️ Aviso Importante
 
-<h2>O que eu preciso instalar/configurar no computador antes de estar pronto para executar o programa?</h2>
-Para que o o programa funcione os itens abaixo devem ser configurados, as explicações necessárias estão mais adiate neste documento.
-- Baixar este repositório.
-- Python instalado [python.org](url);
-- Pip instalado [https://pypi.org/project/pip/](url);
-- Selenium pip instalado [https://pypi.org/project/selenium/](url);
-- Webdriver-manager pip instalado [https://pypi.org/project/webdriver-manager/](url);
-- beautifulsoup4 pip [https://pypi.org/project/beautifulsoup4/](url);
-- Navegador Google Chrome em sua versão atualizada normal [google.com/chrome](url);
-- Chrome for testing [https://googlechromelabs.github.io/chrome-for-testing/](url);
-- Chrome driver [https://googlechromelabs.github.io/chrome-for-testing/](url);
-- Endereço de webhook onde os deal serão enviados.
+> [cite_start]Este programa foi projetado para rodar em qualquer distribuição Linux[cite: 5]. Recomenda-se o uso em um ambiente virtualizado. [cite_start]Para que o script funcione corretamente, **nenhuma outra instância do Google Chrome pode estar rodando** no sistema operacional durante a execução do programa[cite: 5].
 
-<h2>Como instalar arquivos do repositório?</h2>
-1. Baixe o arquivo dealWatcher.py no repositório https://github.com/percus-lab/deal-watcher
-2. Coloque o arquivo em um pasta separada como, por exemplo: /home/seu-nome-de-usuario/Documentos/reps/deal-watcher/dealWatcher.py
+## ✅ Pré-requisitos
 
-<h2>Como instalar Python, e os pacotes Pip?</h2>
-1. Instale o Python no seu sistema linux, em casos de sistemas baseados em Debian, pode se usar o comando a baixo:
-  sudo apt install python
-2. Instale o Pip, se necessário:
-  sudo apt install python-pip
-4. Instale os pacotes pip executando os comandos a seguir:
-  pip install selenium
-  pip install webdriver-manager
-  pip install bs4
+Antes de iniciar a configuração, garanta que você tenha os seguintes itens instalados no seu sistema:
 
-<h2>Como instalar o Chrome for testing?</h2>
-1. Para fazer da download da ultima versão do Chrome for Testing, acesse a página [https://googlechromelabs.github.io/chrome-for-testing/](url) copie a URL do Binary: chrome, e Plataform: linux64, no seu navegador ;
-<img width="1772" height="510" alt="image" src="https://github.com/user-attachments/assets/9c872a40-4eae-426b-8549-400fe2fa9d9e" />
-Copie a URL em destaque na imagem para uma nova aba no navegador ;
-2. Após baixar o arquivo chrome-linux64.zip extraia-o para uma pasta com seu nome, em um diretório permanente, como por exemplo; /home/seu-nome-de-usuario/Documentos/chrome-linux64 (Lembre-se de substituir seu-nome-de-usuario pelo nome do seu usuário no sistema operacional);
-3. Copie o caminho do binário chrome que está na pasta, por exemplo: /home/seu-nome-de-usuario/Documentos/chrome-linux64/chrome ;
-4. Abra para edição o arquivo dealWatcher.py e cole o caminho copiado na Constante de Configuração CHROME_BINARY_LOCATION, por exemplo: CHROME_BINARY_LOCATION="/home/seu-nome-de-usuario/Documentos/reps/deal-watcher/depens/chrome-linux64/chrome" .
+* [cite_start][Python](https://www.python.org/) [cite: 7]
+* [cite_start][Pip (gerenciador de pacotes Python)](https://pypi.org/project/pip/) [cite: 7]
+* [cite_start]O navegador [Google Chrome (versão regular)](https://www.google.com/chrome/) instalado e atualizado[cite: 8].
+* [cite_start]Um endereço de webhook para receber as notificações das ofertas[cite: 9].
 
-<h2>Como instalar o Chrome Driver?</h2>
-1. Para fazer da download da ultima versão do Chrome Driver, acesse a página [https://googlechromelabs.github.io/chrome-for-testing/](url) copie a URL do Binary: chromedriver, e Plataform: linux64, no seu navegador ;
-<img width="1745" height="471" alt="image" src="https://github.com/user-attachments/assets/f735b117-10c9-4390-93ec-89d0922b5252" />
-Copie a URL em destaque na imagem para uma nova aba no navegador ;
-2. Após baixar o arquivo chromedriver-linux64.zip extraia-o na pasta de downloads.
-3. Utilize o comando abaixo para mover o arquivo chromedriver de dentro da pasta baixada para o path do seu Linux:
-  sudo mv /home/seu-nome-de-usuario/Downloads/chromedriver-linux64/chromedriver /usr/local/bin
-4. Utilize o comando abaixo para tornar executavel seu chromedriver recém copiado
-  sudo chmod -x /usr/local/bin/chromedriver
+## ⚙️ Guia de Instalação e Configuração
 
-<h2>Como extrair as informações de login da conta do Google que vai utilizar o Deal Broker?</h2>
-1. Instale a versão regular do  Google Chrome [google.com/chrome](url)
-2. Logue no navegador com a conta Google que será utilizada para o Deal Broker;
-3. Feche o navegador;
-4. Copie o caminho a seguir /home/seu-nome-de-usuario/.config/google-chrome/
-5. Abra com um editor de texto o arquivo dealWatcher.py, e cole o caminho na constante de configuração CHROME_USER_DATA_DIR, por exemplo:
-  CHROME_USER_DATA_DIR="/home/seu-nome-de-usuario/.config/google-chrome" 
+Siga os passos abaixo para configurar o ambiente e deixar o Deal Watcher pronto para ser executado.
 
-<h2>Onde eu coloco a URL do meu webhook?</h2>
-Cole a URL do seu webhook na constante de configuração WEBHOOK_URL, por exemplo:
-WEBHOOK_URL= "https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4"
+### Passo 1: Baixar os Arquivos do Repositório
 
+1.  [cite_start]Baixe o arquivo `dealWatcher.py` do repositório [https://github.com/percus-lab/deal-watcher](https://github.com/percus-lab/deal-watcher)[cite: 10].
+2.  Crie uma pasta dedicada para o projeto e coloque o arquivo dentro dela. [cite_start]Por exemplo[cite: 10]:
+    ```bash
+    /home/seu-nome-de-usuario/Documentos/reps/deal-watcher/dealWatcher.py
+    ```
 
+### Passo 2: Instalar Python e Pacotes Necessários
 
+1.  [cite_start]**Instale o Python.** Em sistemas baseados em Debian (como o Ubuntu), você pode usar o comando[cite: 10]:
+    ```sh
+    sudo apt install python
+    ```
+2.  [cite_start]**Instale o Pip**, caso não esteja presente[cite: 10]:
+    ```sh
+    sudo apt install python-pip
+    ```
+3.  [cite_start]**Instale as bibliotecas Python** necessárias para o projeto com os seguintes comandos[cite: 10]:
+    ```sh
+    pip install selenium
+    pip install webdriver-manager
+    pip install bs4
+    ```
+
+### Passo 3: Instalar o Chrome for Testing
+
+O script utiliza uma versão específica do Chrome, chamada "Chrome for Testing", para automação.
+
+1.  [cite_start]Acesse a página oficial de downloads do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/)[cite: 11].
+2.  Na seção de downloads, encontre a versão estável (`Stable`) mais recente.
+3.  [cite_start]Localize a linha correspondente ao binário `chrome` para a plataforma `linux64` e copie a URL para baixá-lo[cite: 11].
+4.  Extraia o conteúdo do arquivo `.zip` para um diretório permanente. [cite_start]Por exemplo[cite: 13, 14]:
+    ```bash
+    /home/seu-nome-de-usuario/Documentos/chrome-linux64
+    ```
+5.  [cite_start]O caminho completo para o executável será algo como[cite: 15]:
+    ```bash
+    /home/seu-nome-de-usuario/Documentos/chrome-linux64/chrome
+    ```
+    Guarde este caminho, pois você o usará na etapa de configuração do script.
+
+### Passo 4: Configurar o Script `dealWatcher.py`
+
+Abra o arquivo `dealWatcher.py` em um editor de texto para configurar as constantes principais.
+
+1.  **Configurar o Perfil do Google Chrome (Login)**
+    * [cite_start]Faça login no Google Chrome (versão normal) com a conta que tem acesso ao Deal Broker e depois feche o navegador[cite: 21].
+    * No arquivo `dealWatcher.py`, localize a constante `CHROME_USER_DATA_DIR` e cole o caminho para o diretório de configuração do Chrome. [cite_start]O padrão é[cite: 21]:
+        ```python
+        CHROME_USER_DATA_DIR="/home/seu-nome-de-usuario/.config/google-chrome" 
+        ```
+
+2.  **Apontar para o Binário do Chrome for Testing**
+    * Localize a constante `CHROME_BINARY_LOCATION` e cole o caminho completo para o executável que você extraiu no **Passo 3**. [cite_start]Por exemplo[cite: 16]:
+        ```python
+        CHROME_BINARY_LOCATION="/home/seu-nome-de-usuario/Documentos/reps/deal-watcher/depens/chrome-linux64/chrome"
+        ```
+
+3.  **Definir a URL do Webhook**
+    * [cite_start]Localize a constante `WEBHOOK_URL` e insira a URL do seu webhook[cite: 21]. Por exemplo:
+        ```python
+        WEBHOOK_URL= "[https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4](https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4)"
+        ```
+
+## ▶️ Executando o Programa
+
+Após concluir toda a instalação e configuração, você pode iniciar o monitoramento.
+
+1.  Abra um terminal.
+2.  Navegue até o diretório onde você salvou o arquivo `dealWatcher.py`.
+3.  Execute o script com o seguinte comando:
+    ```sh
+    python3 dealWatcher.py
+    ```
+
+O script começará a rodar, e o log de atividades será exibido no terminal e salvo no arquivo `deal_monitor.log`.
