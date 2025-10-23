@@ -105,7 +105,7 @@ Para que o script acesse o Deal Broker, ele precisa dos dados do seu perfil do C
 
 1.  No arquivo `dealWatcher.py`, localize a constante `WEBHOOK_URL` e cole a URL do seu webhook. Por exemplo:
     ```python
-    WEBHOOK_URL="[https://seu.webhook/exemplo/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4"
+    WEBHOOK_URL="https://seu.webhook/exemplo/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4"
     ```
 
 ## 7. Como executar o programa?
