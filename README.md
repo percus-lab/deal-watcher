@@ -62,8 +62,7 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 ## 3. Como instalar e configurar o Chrome for Testing?
 
 1.  Acesse a página de downloads do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/).
-2.  Copie a URL do **Binary** referente ao `chrome` na plataforma `linux64` e use-a para baixar o arquivo `chrome-linux64.zip`.
-<img width="1691" height="418" alt="image" src="https://github.com/user-attachments/assets/9c0ad5ec-26f5-4690-9b8f-b10b612446b9" />
+2.  Copie a URL do **Binary** referente ao `chrome` na plataforma `linux64` e use-a para baixar o arquivo `chrome-linux64.zip`.<img width="1691" height="418" alt="image" src="https://github.com/user-attachments/assets/9c0ad5ec-26f5-4690-9b8f-b10b612446b9" />
 3.  Extraia o arquivo para uma pasta permanente. Por exemplo:
     ```bash
     /home/seu-nome-de-usuario/Documentos/chrome-linux64
@@ -79,8 +78,7 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 
 ## 4. Como instalar o Chrome Driver?
 
-1.  Na mesma página do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/), copie a URL do **Binary** referente ao `chromedriver` na plataforma `linux64` para baixar o arquivo.
-<img width="1679" height="519" alt="image" src="https://github.com/user-attachments/assets/264ef38c-4738-4185-aa2e-75db3e1d296d" />
+1.  Na mesma página do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/), copie a URL do **Binary** referente ao `chromedriver` na plataforma `linux64` para baixar o arquivo.<img width="1679" height="519" alt="image" src="https://github.com/user-attachments/assets/264ef38c-4738-4185-aa2e-75db3e1d296d" />
 2.  Após baixar, extraia o arquivo `chromedriver-linux64.zip` na sua pasta de downloads.
 3.  Mova o arquivo `chromedriver` para um diretório no PATH do seu sistema, para que ele possa ser encontrado pelo script. Um local comum é `/usr/local/bin`:
     ```sh
