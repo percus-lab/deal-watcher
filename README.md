@@ -40,6 +40,7 @@ Para que o o programa funcione os itens abaixo devem ser configurados, as explic
 
 <h2>Como instalar o Chrome for testing?</h2>
 1. Para fazer da download da ultima versão do Chrome for Testing, acesse a página [https://googlechromelabs.github.io/chrome-for-testing/](url) copie a URL do Binary: chrome, e Plataform: linux64, no seu navegador.
-<img width="1772" height="510" alt="image" src="https://github.com/user-attachments/assets/9c872a40-4eae-426b-8549-400fe2fa9d9e" />
+<img figcaption="Copie a URL em destaque para uma nova aba em seu navegador" width="1772" height="510" alt="image" src="https://github.com/user-attachments/assets/9c872a40-4eae-426b-8549-400fe2fa9d9e" />
+
 
 
