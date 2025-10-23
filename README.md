@@ -38,7 +38,7 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 
 ## 1. Como instalar os arquivos do repositório?
 
-1.  Baixe o arquivo `dealWatcher.py` do repositório: `https://github.com/percus-lab/deal-watcher`.
+1.  Baixe o arquivo `dealWatcher.py` do repositório: [https://github.com/percus-lab/deal-watcher](url).
 2.  Coloque o arquivo em uma pasta separada. Por exemplo:
     ```bash
     /home/seu-nome-de-usuario/Documentos/reps/deal-watcher/dealWatcher.py
@@ -63,6 +63,7 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 
 1.  Acesse a página de downloads do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/).
 2.  Copie a URL do **Binary** referente ao `chrome` na plataforma `linux64` e use-a para baixar o arquivo `chrome-linux64.zip`.
+<img width="1691" height="418" alt="image" src="https://github.com/user-attachments/assets/9c0ad5ec-26f5-4690-9b8f-b10b612446b9" />
 3.  Extraia o arquivo para uma pasta permanente. Por exemplo:
     ```bash
     /home/seu-nome-de-usuario/Documentos/chrome-linux64
@@ -79,6 +80,7 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 ## 4. Como instalar o Chrome Driver?
 
 1.  Na mesma página do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/), copie a URL do **Binary** referente ao `chromedriver` na plataforma `linux64` para baixar o arquivo.
+<img width="1679" height="519" alt="image" src="https://github.com/user-attachments/assets/264ef38c-4738-4185-aa2e-75db3e1d296d" />
 2.  Após baixar, extraia o arquivo `chromedriver-linux64.zip` na sua pasta de downloads.
 3.  Mova o arquivo `chromedriver` para um diretório no PATH do seu sistema, para que ele possa ser encontrado pelo script. Um local comum é `/usr/local/bin`:
     ```sh
@@ -91,11 +93,12 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
 
 ## 5. Como configurar os dados de login?
 
-Para que o script acesse o Deal Broker já logado, ele precisa dos dados do seu perfil do Chrome.
+Para que o script acesse o Deal Broker, ele precisa dos dados do seu perfil do Chrome.
 
-1.  Instale e faça login no Google Chrome (versão regular) com a conta que será utilizada.
-2.  Feche o navegador completamente.
-3.  Ainda no arquivo `dealWatcher.py`, localize a constante `CHROME_USER_DATA_DIR` e cole o caminho para o diretório de configuração do Chrome. Por exemplo:
+1.  Instale e faça login no Google Chrome (versão regular) com a conta Google que será utilizada no Deal Broker.
+2.  Para confirmar, também logue na plataforma do Deal Broker [https://deal.brokers.mktlab.app/](url).
+3.  Feche o navegador completamente.
+4.  Ainda no arquivo `dealWatcher.py`, localize a constante `CHROME_USER_DATA_DIR` e cole o caminho para o diretório de configuração do Chrome. Por exemplo:
     ```python
     CHROME_USER_DATA_DIR="/home/seu-nome-de-usuario/.config/google-chrome"
     ```
