@@ -73,14 +73,14 @@ Para que o programa funcione, os itens abaixo devem ser instalados e configurado
     ```
 5.  **Abra o arquivo `dealWatcher.py`** e cole o caminho que você acabou de copiar na constante `CHROME_BINARY_LOCATION`. Por exemplo:
     ```python
-    CHROME_BINARY_LOCATION="/home/seu-nome-de-usuario/Documentos/reps/deal-watcher/depens/chrome-linux64/chrome"
+    CHROME_BINARY_LOCATION="/home/seu-nome-de-usuario/Documentos/chrome-linux64/chrome"
     ```
 
 ## 4. Como instalar o Chrome Driver?
 
 1.  Na mesma página do [Chrome for Testing](https://googlechromelabs.github.io/chrome-for-testing/), copie a URL do **Binary** referente ao `chromedriver` na plataforma `linux64` e cole em uma nova aba no seu navegador para baixar.<img width="1679" height="519" alt="image" src="https://github.com/user-attachments/assets/264ef38c-4738-4185-aa2e-75db3e1d296d" />
 2.  Após baixar, extraia o arquivo `chromedriver-linux64.zip` na sua pasta de downloads.
-3.  Mova o arquivo `chromedriver` para um diretório no PATH do seu sistema, para que ele possa ser encontrado pelo script. Um local comum é `/usr/local/bin`:
+3.  Mova o arquivo `chromedriver` de dentro da pasta extraida para um diretório no PATH do seu sistema, para que ele possa ser encontrado pelo script. para isso você pode usar o comando a seguir:
     ```sh
     sudo mv /home/seu-nome-de-usuario/Downloads/chromedriver-linux64/chromedriver /usr/local/bin
     ```
@@ -105,7 +105,7 @@ Para que o script acesse o Deal Broker, ele precisa dos dados do seu perfil do C
 
 1.  No arquivo `dealWatcher.py`, localize a constante `WEBHOOK_URL` e cole a URL do seu webhook. Por exemplo:
     ```python
-    WEBHOOK_URL="[https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4](https://zapier.com.br/webhook/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4)"
+    WEBHOOK_URL="[https://seu.webhook/exemplo/b83cad5f-2a0f-4fa3-a9bf-efc3c5d9ec4"
     ```
 
 ## 7. Como executar o programa?
@@ -114,6 +114,9 @@ Após concluir toda a configuração:
 
 1.  Abra um terminal.
 2.  Navegue até o diretório onde você salvou o arquivo `dealWatcher.py`.
+    ```sh
+    cd /Documentos/reps/deal-watcher/
+    ```
 3.  Execute o script com o comando:
     ```sh
     python3 dealWatcher.py
